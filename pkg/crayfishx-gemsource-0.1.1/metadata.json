@@ -1,0 +1,51 @@
+{
+  "name": "crayfishx-gemsource",
+  "version": "0.1.1",
+  "source": "http://github.com/crayfishx/puppet-gemsource",
+  "author": "crayfishx",
+  "license": "Apache License, Version 2.0",
+  "summary": "Manage gem sources",
+  "description": "Manages gem sources with support for PE inbuilt rubygems",
+  "project_page": "http://github.com/crayfishx/puppet-gemsource",
+  "dependencies": [
+
+  ],
+  "types": [
+    {
+      "name": "gemsource",
+      "doc": "Manage rubygem sources",
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`."
+        }
+      ],
+      "parameters": [
+        {
+          "name": "url",
+          "doc": "URL of the gem source"
+        },
+        {
+          "name": "pe",
+          "doc": "When set to true will force /opt/puppet/bin/gem  Valid values are `true`, `false`."
+        }
+      ],
+      "providers": [
+        {
+          "name": "gem",
+          "doc": ""
+        }
+      ]
+    }
+  ],
+  "checksums": {
+    "Modulefile": "d1864f53ab63e414b0ef7c68faf168ba",
+    "README": "88ca40df23d79f22b6f97b8ba0df2166",
+    "README.md": "7c131e5e0258c9e2ce1c17e3500e6f4f",
+    "lib/puppet/provider/gemsource/gem.rb": "0ddf03c7a1a3057e43f4e8ebb7193d3d",
+    "lib/puppet/type/gemsource.rb": "b24171189a9644d89c0c4f93671db95a",
+    "manifests/init.pp": "315ac968f8d54dfdb32c2e005afe8408",
+    "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+    "tests/init.pp": "82b83447752108c1b88340f5f7dbb43d"
+  }
+}
