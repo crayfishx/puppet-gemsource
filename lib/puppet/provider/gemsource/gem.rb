@@ -9,22 +9,14 @@ Puppet::Type.type(:gemsource).provide(:gem) do
     end
   end
 
-  def configlocation
-    if @resource[:globalconfig] = :true
-      "--config-file /etc/gemrc"
-    else
-      ""
-    end
-  end
-
   def execgem(*args)
-      if Open3.popen3("#{gemexe} #{configlocation} sources #{args.join(" ")}")[3].value.success? == false 
+      if Open3.popen3("#{gemexe} sources #{args.join(" ")}")[3].value.success? == false 
         raise Puppet::Error, "Error running gem sources #{args.join(" ")}"
       end
   end
 
   def exists?
-    Open3.popen3("#{gemexe} #{configlocation} sources --list") do |stdin, stdout, stderr|
+    Open3.popen3("#{gemexe} sources --list") do |stdin, stdout, stderr|
       stdout.each do |line|
         return true if line =~ /^#{resource[:url]}$/
       end
