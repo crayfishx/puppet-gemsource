@@ -12,6 +12,12 @@ Puppet::Type.newtype(:gemsource) do
     defaultto :false
     newvalues(:true, :false)
   end
+  
+  newparam(:globalconfig) do
+    desc "If set to true, the resource will be set globally for the system using /etc/gemrc. Defaults to false"
+    defaultto :false
+    newvalues(:true, :false)
+  end
 
 end
 
