@@ -10,7 +10,7 @@ Puppet::Type.type(:gemsource).provide(:gem) do
   end
 
   def configlocation
-    if @resource[:globalconfig] = :true
+    if @resource[:globalconfig] == :true
       "--config-file /etc/gemrc"
     else
       ""
