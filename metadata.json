@@ -1,6 +1,6 @@
 {
   "name": "crayfishx-gemsource",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Craig Dunn <craig@craigdunn.org>",
   "summary": "Manage rubygem source repos",
   "license": "Apache-2.0",
