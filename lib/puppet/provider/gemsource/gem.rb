@@ -19,7 +19,7 @@ Puppet::Type.type(:gemsource).provide(:gem) do
 
   def execgem(*args)
       if Open3.popen3("#{gemexe} #{configlocation} sources #{args.join(" ")}")[3].value.success? == false 
-        raise Puppet::Error, "Error running gem sources #{args.join(" ")}"
+        raise Puppet::Error, "Error running #{gemexe} #{configlocation} #{args.join(" ")}"
       end
   end
 
