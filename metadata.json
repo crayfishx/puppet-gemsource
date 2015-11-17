@@ -1,0 +1,14 @@
+{
+  "name": "crayfishx-gemsource",
+  "version": "0.1.0",
+  "author": "Craig Dunn <craig@craigdunn.org>",
+  "summary": "Manage rubygem source repos",
+  "license": "Apache-2.0",
+  "source": "https://github.com/crayfishx/puppet-gemsource",
+  "project_page": "https://github.com/crayfishx/puppet-gemsource",
+  "issues_url": "https://github.com/crayfishx/puppet-gemsource/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
